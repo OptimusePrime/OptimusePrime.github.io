@@ -24,7 +24,7 @@ export default {
       navItems: [
         new NavItem(0, "Home", "/"),
         new NavItem(1, "Location", "/map"),
-        new NavItem(2, "History", "/history"),
+        new NavItem(2, "Tourist Guide", "/guide"),
         new NavItem(3, "Photo Gallery", "/photos")
       ],
       footer: `Copyright © ${new Date().getFullYear()} Karlo Vizec. All rights reserved.`

@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from "/src/components/pages/Home"
 import Location from "/src/components/pages/Location"
-import History from "/src/components/pages/History"
+import TouristGuide from "/src/components/pages/TouristGuide"
 import PhotoGallery from "@/components/pages/PhotoGallery";
 
 Vue.use(VueRouter)
@@ -16,15 +16,12 @@ const routes = [
   {
     path: '/map',
     name: 'Location | Kabul',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: Location
   },
   {
-    path: "/history",
-    name :"History | Kabul",
-    component: History
+    path: "/guide",
+    name :"Tourist Guide | Kabul",
+    component: TouristGuide
   },
   {
     path: "/photos",

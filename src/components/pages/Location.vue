@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-light text-light text-center text-sm-start">
+  <section class="bg-light text-light text-center text-sm-start p-4">
     <div class="container">
       <div class="align-items-start justify-content-around">
         <div>
