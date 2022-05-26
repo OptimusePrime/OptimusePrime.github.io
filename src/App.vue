@@ -1,28 +1,34 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <NavBar :routes="navItems" brand="logo.jpg"></NavBar>
+    <router-view/>
   </div>
 </template>
 
+<style>
+#app {
+  font-family: Comfortaa, Helvetica, sans-serif;
+}
+
+</style>
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import NavBar from "@/components/NavBar";
+import {NavItem} from "@/utils";
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
+    NavBar,
+  },
+  data() {
+    return {
+      navItems: [
+        new NavItem(0, "Home", "/"),
+        new NavItem(1, "Location", "/map"),
+        new NavItem(2, "History", "/history"),
+        new NavItem(3, "Photo Gallery", "/photos")
+      ],
+      footer: `Copyright © ${new Date().getFullYear()} Karlo Vizec. All rights reserved.`
+    }
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
